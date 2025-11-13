@@ -23,6 +23,43 @@ All infrastructure is built automatically using **Terraform**, and the frontend 
 ## 🧩 Architecture Overview
 
 ```
+                          [ GitHub Repository ]
+                                   │
+                                   │ (Webhook / Poll)
+                                   ▼
+                          [ Jenkins CI/CD Server ]
+                                   │
+      ┌────────────────────────────┼─────────────────────────────┐
+      │                            │                             │
+      ▼                            ▼                             ▼
+[ Build React App ]     [ Upload build/ to S3 ]      [ Invalidate CloudFront Cache ]
+      │                            │                             │
+      └────────────────────────────┴───────────────┬─────────────┘
+                                                   ▼
+                                   [ S3 Frontend Bucket ]
+                                                   │
+                                                   ▼
+                                        [ CloudFront CDN ]
+                                                   │
+                                                   ▼
+                                            [ User Browser ]
+                                                   │
+                                        (API Requests)
+                                                   ▼
+                                        [ ALB - Load Balancer ]
+                                                   │
+                                                   ▼
+                              [ EC2 Auto Scaling Group (Backend) ]
+                              (Node.js + Express + PM2 + S3 SDK)
+                                   │                  │
+                                   │                  └───────────────► [ S3 Upload Bucket ]
+                                   │
+                                   ▼
+                         [ RDS MySQL Database ]
+                     (Stores filename, URL, metadata)
+```
+
+```
 graph TD
 A[User Browser] -->|HTTPS| B[CloudFront CDN]
 B --> C[S3 Bucket (Frontend)]
