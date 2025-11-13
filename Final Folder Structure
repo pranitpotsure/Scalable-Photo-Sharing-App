@@ -1,0 +1,28 @@
+photo-sharing-app/
+│
+├── terraform/
+│   ├── main.tf
+│   ├── user_data.sh
+│   └── .terraform.lock.hcl
+│
+├── photo-backend/
+│   ├── app.js
+│   ├── package.json
+│   ├── .env.example
+│   └── README.md
+│
+├── photo-frontend/
+│   ├── src/
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   ├── index.css
+│   │   └── components/
+│   ├── public/
+│   │   └── index.html
+│   ├── package.json
+│   ├── tailwind.config.js
+│   ├── postcss.config.js
+│   ├── Jenkinsfile
+│   └── .env.example
+│
+└── README.md
