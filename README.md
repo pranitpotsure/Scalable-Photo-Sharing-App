@@ -248,6 +248,7 @@ pipeline {
 
 Click Build Now
 ✅ Jenkins pulls your frontend repo → builds React app → deploys to S3 → refreshes CDN.
+
 ---
 
 ### 🌐 PHASE 5 — Verify Deployment
@@ -256,6 +257,7 @@ Frontend (UI)	CloudFront	https://dzewjfie62mf2.cloudfront.net
 Backend API	EC2 (ALB)	https://photos.keypress.shop
 Database	RDS	photo-db.czkokeyqgq7l.ap-south-1.rds.amazonaws.com
 Image Storage	S3	photo-app-229e7fc1
+
 ---
 
 ### 📊 Architecture Highlights
@@ -266,6 +268,7 @@ Security	IAM Roles + Security Groups
 Performance	CloudFront CDN
 Cost Optimization	S3 static hosting, t2.micro instances
 Monitoring	CloudWatch & PM2
+
 ---
 
 ### 🧠 Key Learnings
@@ -275,6 +278,7 @@ Monitoring	CloudWatch & PM2
 - Secure apps with IAM + OAC + Security Groups
 - Optimize frontend with S3 + CloudFront
 - Integrate CI/CD in a real-world cloud project
+
 ---
 
 ## 📸 Project Screenshots
@@ -289,6 +293,7 @@ Monitoring	CloudWatch & PM2
 | 6️⃣ | **S3 Bucket (Uploads)** | ![S3 Upload Bucket](https://raw.githubusercontent.com/pranitpotsure/Scalable-Photo-Sharing-App/main/image/s3%20bucket%20for%20upload.png) |
 | 7️⃣ | **S3 Bucket (Frontend Hosting)** | ![S3 Frontend Bucket](https://raw.githubusercontent.com/pranitpotsure/Scalable-Photo-Sharing-App/main/image/s3%20bucket%20frontend.png) |
 | 8️⃣ | **All Images Preview** | ![Images](https://raw.githubusercontent.com/pranitpotsure/Scalable-Photo-Sharing-App/main/image/imges.png) |
+
 ---
 
 ### 👨‍💻 Author
