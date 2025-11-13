@@ -141,6 +141,7 @@ pm2 start app.js --name photo-backend
 
 ✅ Check logs:
 pm2 logs
+---
 
 ### 💻 PHASE 3 — Frontend Setup (React + Tailwind)
 🧠 Purpose
@@ -160,6 +161,7 @@ REACT_APP_API_URL=https://photos.keypress.shop
 
 **⚙️ Step 3: Build for Production**
 npm run build
+---
 
 ### 🚀 PHASE 4 — Jenkins CI/CD Setup
 🧠 Purpose
@@ -246,6 +248,7 @@ pipeline {
 
 Click Build Now
 ✅ Jenkins pulls your frontend repo → builds React app → deploys to S3 → refreshes CDN.
+---
 
 ### 🌐 PHASE 5 — Verify Deployment
 Component	Service	URL
@@ -253,6 +256,7 @@ Frontend (UI)	CloudFront	https://dzewjfie62mf2.cloudfront.net
 Backend API	EC2 (ALB)	https://photos.keypress.shop
 Database	RDS	photo-db.czkokeyqgq7l.ap-south-1.rds.amazonaws.com
 Image Storage	S3	photo-app-229e7fc1
+---
 
 ### 📊 Architecture Highlights
 Feature	Implementation
@@ -262,6 +266,7 @@ Security	IAM Roles + Security Groups
 Performance	CloudFront CDN
 Cost Optimization	S3 static hosting, t2.micro instances
 Monitoring	CloudWatch & PM2
+---
 
 ### 🧠 Key Learnings
 - Design and deploy a multi-tier AWS architecture
@@ -270,6 +275,21 @@ Monitoring	CloudWatch & PM2
 - Secure apps with IAM + OAC + Security Groups
 - Optimize frontend with S3 + CloudFront
 - Integrate CI/CD in a real-world cloud project
+---
+
+## 📸 Project Screenshots
+
+| Step | Description | Preview |
+|------|-------------|---------|
+| 1️⃣ | **CI/CD Pipeline Diagram** | ![CICD](https://raw.githubusercontent.com/pranitpotsure/Scalable-Photo-Sharing-App/main/image/CICD.png) |
+| 2️⃣ | **CloudFront Distribution** | ![CloudFront](https://raw.githubusercontent.com/pranitpotsure/Scalable-Photo-Sharing-App/main/image/cloudfront.png) |
+| 3️⃣ | **EC2 Backend Instance** | ![EC2](https://raw.githubusercontent.com/pranitpotsure/Scalable-Photo-Sharing-App/main/image/ec2.png) |
+| 4️⃣ | **Uploaded Images – S3 Bucket** | ![Uploaded Images](https://raw.githubusercontent.com/pranitpotsure/Scalable-Photo-Sharing-App/main/image/uploaded%20imges.png) |
+| 5️⃣ | **RDS MySQL Database** | ![RDS](https://raw.githubusercontent.com/pranitpotsure/Scalable-Photo-Sharing-App/main/image/rds.png) |
+| 6️⃣ | **S3 Bucket (Uploads)** | ![S3 Upload Bucket](https://raw.githubusercontent.com/pranitpotsure/Scalable-Photo-Sharing-App/main/image/s3%20bucket%20for%20upload.png) |
+| 7️⃣ | **S3 Bucket (Frontend Hosting)** | ![S3 Frontend Bucket](https://raw.githubusercontent.com/pranitpotsure/Scalable-Photo-Sharing-App/main/image/s3%20bucket%20frontend.png) |
+| 8️⃣ | **All Images Preview** | ![Images](https://raw.githubusercontent.com/pranitpotsure/Scalable-Photo-Sharing-App/main/image/imges.png) |
+---
 
 ### 👨‍💻 Author
 Pranit Potsure
