@@ -43,14 +43,17 @@ All infrastructure is built automatically using **Terraform**, and the frontend 
                 (Stores filename, URL, metadata)
 ```
 
+**CI/CD (separate vertical flow)**
 ```
-graph TD
-A[User Browser] -->|HTTPS| B[CloudFront CDN]
-B --> C[S3 Bucket (Frontend)]
-B --> D[Application Load Balancer]
-D --> E[EC2 Instance (Backend - Node.js)]
-E --> F[RDS Database (MySQL)]
-E --> G[S3 Bucket (Photo Storage)]
+[ GitHub ]
+    │
+    ▼
+[ Jenkins ]
+    │
+    ├── Builds React App
+    ├── Syncs build/ to S3
+    └── Invalidates CloudFront Cache
+
 ```
 ---
 
