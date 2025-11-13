@@ -23,40 +23,24 @@ All infrastructure is built automatically using **Terraform**, and the frontend 
 ## 🧩 Architecture Overview
 
 ```
-                          [ GitHub Repository ]
-                                   │
-                                   │ (Webhook / Poll)
-                                   ▼
-                          [ Jenkins CI/CD Server ]
-                                   │
-      ┌────────────────────────────┼─────────────────────────────┐
-      │                            │                             │
-      ▼                            ▼                             ▼
-[ Build React App ]     [ Upload build/ to S3 ]      [ Invalidate CloudFront Cache ]
-      │                            │                             │
-      └────────────────────────────┴───────────────┬─────────────┘
-                                                   ▼
-                                   [ S3 Frontend Bucket ]
-                                                   │
-                                                   ▼
-                                        [ CloudFront CDN ]
-                                                   │
-                                                   ▼
-                                            [ User Browser ]
-                                                   │
-                                        (API Requests)
-                                                   ▼
-                                        [ ALB - Load Balancer ]
-                                                   │
-                                                   ▼
-                              [ EC2 Auto Scaling Group (Backend) ]
-                              (Node.js + Express + PM2 + S3 SDK)
-                                   │                  │
-                                   │                  └───────────────► [ S3 Upload Bucket ]
-                                   │
-                                   ▼
-                         [ RDS MySQL Database ]
-                     (Stores filename, URL, metadata)
+[ User Browser ]
+        │
+        ▼
+[ CloudFront CDN ]
+        │
+        ▼
+[ S3 (Frontend React App) ]
+        │
+        ▼ (API call: /upload, /photos)
+[ Application Load Balancer (ALB) ]
+        │
+        ▼
+[ EC2 Backend (Node.js + Express + PM2) ]
+        │               │
+        │               └────────────► [ S3 Bucket (Uploaded Images) ]
+        ▼
+[ RDS MySQL Database ]
+                (Stores filename, URL, metadata)
 ```
 
 ```
