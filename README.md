@@ -306,17 +306,18 @@ Monitoring	CloudWatch & PM2
 ---
 
 ## 📸 Project Screenshots
+| Step | Description                      | Preview                                                                                                                                   |
+| ---- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| 1️⃣  | **Full Architecture Workflow**   | ![Workflow](https://raw.githubusercontent.com/pranitpotsure/Scalable-Photo-Sharing-App/main/image/workflow.png)                           |
+| 2️⃣  | **CI/CD Pipeline Diagram**       | ![CICD](https://raw.githubusercontent.com/pranitpotsure/Scalable-Photo-Sharing-App/main/image/CICD.png)                                   |
+| 3️⃣  | **CloudFront Distribution**      | ![CloudFront](https://raw.githubusercontent.com/pranitpotsure/Scalable-Photo-Sharing-App/main/image/cloudfront.png)                       |
+| 4️⃣  | **EC2 Backend Instance**         | ![EC2](https://raw.githubusercontent.com/pranitpotsure/Scalable-Photo-Sharing-App/main/image/ec2.png)                                     |
+| 5️⃣  | **Uploaded Images – S3 Bucket**  | ![Uploaded Images](https://raw.githubusercontent.com/pranitpotsure/Scalable-Photo-Sharing-App/main/image/uploaded%20imges.png)            |
+| 6️⃣  | **RDS MySQL Database**           | ![RDS](https://raw.githubusercontent.com/pranitpotsure/Scalable-Photo-Sharing-App/main/image/rds.png)                                     |
+| 7️⃣  | **S3 Bucket (Uploads)**          | ![S3 Upload Bucket](https://raw.githubusercontent.com/pranitpotsure/Scalable-Photo-Sharing-App/main/image/s3%20bucket%20for%20upload.png) |
+| 8️⃣  | **S3 Bucket (Frontend Hosting)** | ![S3 Frontend Bucket](https://raw.githubusercontent.com/pranitpotsure/Scalable-Photo-Sharing-App/main/image/s3%20bucket%20frontend.png)   |
+| 9️⃣  | **All Images Preview**           | ![Images](https://raw.githubusercontent.com/pranitpotsure/Scalable-Photo-Sharing-App/main/image/imges.png)                                |
 
-| Step | Description | Preview |
-|------|-------------|---------|
-| 1️⃣ | **CI/CD Pipeline Diagram** | ![CICD](https://raw.githubusercontent.com/pranitpotsure/Scalable-Photo-Sharing-App/main/image/CICD.png) |
-| 2️⃣ | **CloudFront Distribution** | ![CloudFront](https://raw.githubusercontent.com/pranitpotsure/Scalable-Photo-Sharing-App/main/image/cloudfront.png) |
-| 3️⃣ | **EC2 Backend Instance** | ![EC2](https://raw.githubusercontent.com/pranitpotsure/Scalable-Photo-Sharing-App/main/image/ec2.png) |
-| 4️⃣ | **Uploaded Images – S3 Bucket** | ![Uploaded Images](https://raw.githubusercontent.com/pranitpotsure/Scalable-Photo-Sharing-App/main/image/uploaded%20imges.png) |
-| 5️⃣ | **RDS MySQL Database** | ![RDS](https://raw.githubusercontent.com/pranitpotsure/Scalable-Photo-Sharing-App/main/image/rds.png) |
-| 6️⃣ | **S3 Bucket (Uploads)** | ![S3 Upload Bucket](https://raw.githubusercontent.com/pranitpotsure/Scalable-Photo-Sharing-App/main/image/s3%20bucket%20for%20upload.png) |
-| 7️⃣ | **S3 Bucket (Frontend Hosting)** | ![S3 Frontend Bucket](https://raw.githubusercontent.com/pranitpotsure/Scalable-Photo-Sharing-App/main/image/s3%20bucket%20frontend.png) |
-| 8️⃣ | **All Images Preview** | ![Images](https://raw.githubusercontent.com/pranitpotsure/Scalable-Photo-Sharing-App/main/image/imges.png) |
 
 ---
 
